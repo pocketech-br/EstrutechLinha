@@ -606,7 +606,22 @@ namespace startbit {
             pins.analogWritePin(pin2, 0);
             pins.analogWritePin(pin1, 0);
         }
-
+if  ( porta  ==  startbit_fanPort . porta3 )  {
+            pin1  =  AnalogPin . P13 ;
+            pin2  =  AnalogPin . P14 ;
+        }
+        if  ( velocidade1  <  0 )  {
+            pinos . analogWritePin ( pin2,0 ) ;  
+            pinos . analogWritePin ( pin1 ,  pins . map ( -speed1 , 0 , 100 , 0 , 1023 ) ) ;     
+        }
+        else  if  ( velocidade1  >  0 )  {
+            pinos . analogWritePin ( pin1,0 ) ; 
+            pinos . analogWritePin ( pin2 ,  pins . map ( speed1 ,  0 ,  100 ,  0 ,  1023 ) ) ;
+        }
+        outra coisa  {
+            pinos . analogWritePin ( pin2,0 ) ;  
+            pinos . analogWritePin ( pin1,0 ) ; 
+        }
     }
 
     /**
