@@ -92,26 +92,14 @@ namespace startbit {
         //% block="Port 1"
         port1 = 0x01,
 	//% block="Port 2"
-        port2 = 0x02,
-        //% block="Port 3"
-        port3 = 0x03,
-	//% block="Port 4"
-        port4 = 0x04
-        
-         
+        port2 = 0x02
     }
 	
     export enum startbit_PhotosensitiveSensor {
         //% block="Port 1"
-        port1 = 0x01,
-	//% block="Port 2"
-        port2 = 0x02,
-        //% block="Port 3"
-        port3 = 0x03,
-	//% block="Port 4"
-        port4 = 0x04
-        
-        
+        port1 = 0x00,
+        //% block="Port 2"
+        port2 = 0x01
     }
 
     export enum startbit_fanPort {
@@ -591,22 +579,6 @@ namespace startbit {
         let pin2 = AnalogPin.P2;
 
         if (port == startbit_fanPort.port2) {
-            pin1 = AnalogPin.P13;
-            pin2 = AnalogPin.P14;
-        }
-        if (speed1 < 0) {
-            pins.analogWritePin(pin2, 0);
-            pins.analogWritePin(pin1, pins.map(-speed1, 0, 100, 0, 1023));
-        }
-        else if (speed1 > 0) {
-            pins.analogWritePin(pin1, 0);
-            pins.analogWritePin(pin2, pins.map(speed1, 0, 100, 0, 1023));
-        }
-        else {
-            pins.analogWritePin(pin2, 0);
-            pins.analogWritePin(pin1, 0);
-        }
-       if (port == startbit_fanPort.port3) {
             pin1 = AnalogPin.P13;
             pin2 = AnalogPin.P14;
         }
@@ -1394,24 +1366,18 @@ namespace startbit {
         let status = 0;
         let flag: boolean = false;
         switch (port) {
-          case startbit_PhotosensitiveSensor.port1:
+            case startbit_PhotosensitiveSensor.port1:
                 pins.setPull(DigitalPin.P2, PinPullMode.PullUp);
                 status = pins.digitalReadPin(DigitalPin.P2);
                 break;
-          case startbit_PhotosensitiveSensor.port2:
-                pins.setPull(DigitalPin.P3, PinPullMode.PullUp);
-                status = pins.digitalReadPin(DigitalPin.P3);
-                break;	
-	  case startbit_PhotosensitiveSensor.port3:
+
+	    case startbit_PhotosensitiveSensor.port2:
                 pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
                 status = pins.digitalReadPin(DigitalPin.P13);
-                break;
-	  case startbit_PhotosensitiveSensor.port4:
-                pins.setPull(DigitalPin.P14, PinPullMode.PullUp);
-                status = pins.digitalReadPin(DigitalPin.P14);
-                break;
+                break;	
+			
         }
-        if (status == 1){
+        if (status == 1)
             flag = false;
         else
             flag = true;
