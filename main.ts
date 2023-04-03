@@ -1279,7 +1279,15 @@ namespace startbit {
                 pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
                 status = pins.digitalReadPin(DigitalPin.P13);
                 break;
-            case startbit_touchKeyPort.port3:
+	    case startbit_touchKeyPort.port3:
+                pins.setPull(DigitalPin.P16, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P16);
+                break;
+	    case startbit_touchKeyPort.port4:
+                pins.setPull(DigitalPin.P19, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P19);
+                break;	
+            case startbit_touchKeyPort.port6:
                 if (P14_ad > 0xA)
                     status = 1
                 else
