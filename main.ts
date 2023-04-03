@@ -99,7 +99,7 @@ namespace startbit {
         port4 = 0x04,
 	//% block="Port 5"
         port5 = 0x05,
-	//% block="Port 4"
+	//% block="Port 6"
         port6 = 0x06
 	    
     }
@@ -115,7 +115,7 @@ namespace startbit {
         port4 = 0x03
 	//% block="Port 5"
         port5 = 0x04,
-	//% block="Port 4"
+	//% block="Port 6"
         port6 = 0x05
     }
 
