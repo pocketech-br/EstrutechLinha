@@ -92,14 +92,18 @@ namespace startbit {
         //% block="Port 1"
         port1 = 0x01,
 	//% block="Port 2"
-        port2 = 0x02
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03
     }
 	
     export enum startbit_PhotosensitiveSensor {
         //% block="Port 1"
         port1 = 0x00,
         //% block="Port 2"
-        port2 = 0x01
+        port2 = 0x01,
+	//% block="Port 3"
+        port3 = 0x02
     }
 
     export enum startbit_fanPort {
@@ -1375,6 +1379,12 @@ namespace startbit {
                 pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
                 status = pins.digitalReadPin(DigitalPin.P13);
                 break;	
+		
+            case startbit_PhotosensitiveSensor.port3:
+                pins.setPull(DigitalPin.P14, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P14);
+                break;	
+			
 			
         }
         if (status == 1)
