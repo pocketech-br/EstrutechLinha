@@ -1399,8 +1399,8 @@ namespace startbit {
                 status = pins.digitalReadPin(DigitalPin.P2);
                 break;
           case startbit_PhotosensitiveSensor.port2:
-                pins.setPull(DigitalPin.P1, PinPullMode.PullUp);
-                status = pins.digitalReadPin(DigitalPin.P1);
+                pins.setPull(DigitalPin.P3, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P3);
                 break;	
 	  case startbit_PhotosensitiveSensor.port3:
                 pins.setPull(DigitalPin.P13, PinPullMode.PullUp);
@@ -1416,24 +1416,6 @@ namespace startbit {
         else
             flag = true;
         return flag;
-	}
-	 if (status == 2){
-            flag = false;
-        else
-            flag = true;
-        return flag;    
-	 }
-	 if (status == 3){
-            flag = false;
-        else
-            flag = true;
-        return flag;
-	 } 
-	if (status == 4){
-            flag = false;
-        else
-            flag = true;
-        return flag;   
     }
 	
     /**
@@ -1503,12 +1485,12 @@ namespace startbit {
         switch (port) {
             case startbit_ultrasonicPort.port1:
                 if (!lhRGBLightBelt) {
-                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P1, 15, StartbitRGBPixelMode.RGB);
+                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P5, 15, StartbitRGBPixelMode.RGB);
                 }
                 break;
             case startbit_ultrasonicPort.port2:
                 if (!lhRGBLightBelt) {
-                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P13, 15, StartbitRGBPixelMode.RGB);
+                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P10, 15, StartbitRGBPixelMode.RGB);
                 }
                 break;
         }
