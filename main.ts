@@ -31,8 +31,18 @@ namespace startbit {
     }
 
     export enum startbit_colorSensorPort {
-        //% block="Port 4"
-        port4 = 0x04
+        //% block="Port 1"
+        port1 = 0x01,
+	//% block="Port 2"
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+        //% block="Port 6"
+        port6 = 0x06
     }
 
     export enum startbit_Servos {
@@ -46,7 +56,15 @@ namespace startbit {
         //% block="Port 1"
         port1 = 0x01,
         //% block="Port 2"
-        port2 = 0x02
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+        //% block="Port 6"
+        port6 = 0x06
     }
 
     export enum startbit_touchKeyPort {
@@ -55,12 +73,28 @@ namespace startbit {
         //% block="Port 2"
         port2 = 0x02,
         //% block="Port 3"
-        port3 = 0x03
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+        //% block="Port 6"
+        port6 = 0x06
     }
 
     export enum startbit_lineFollowPort {
-        //% block="Port 1"
-        port1 = 0x01
+	//% block="Port 1"
+        port1 = 0x01,
+	//% block="Port 2"
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+        //% block="Port 6"
+        port6 = 0x06
     }
 
 
@@ -79,13 +113,33 @@ namespace startbit {
     }
 
     export enum startbit_busServoPort {
-        //% block="Port 6"
+        //% block="Port 1"
+        port1 = 0x01,
+	//% block="Port 2"
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+	//% block="Port 6"
         port6 = 0x06
     }
 
     export enum startbit_knobPort {
-        //% block="Port 1"
-        port1 = 0x01
+	//% block="Port 1"
+        port1 = 0x01,
+	//% block="Port 2"
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+        //% block="Port 6"
+        port6 = 0x06
     }
 	
     export enum startbit_photosensitivePort {
@@ -98,7 +152,7 @@ namespace startbit {
 	//% block="Port 4"
         port4 = 0x04,
 	//% block="Port 5"
-        port5 = 0x05
+        port5 = 0x05,
 	//% block="Port 6"
         port6 = 0x06
 	    
@@ -114,7 +168,7 @@ namespace startbit {
 	//% block="Port 4"
         port4 = 0x03,
 	//% block="Port 5"
-        port5 = 0x04
+        port5 = 0x04,
 	//% block="Port 6"
         port6 = 0x05
 	
@@ -138,7 +192,15 @@ namespace startbit {
         //% block="Port 1"
         port1 = 0x01,
         //% block="Port 2"
-        port2 = 0x02
+        port2 = 0x02,
+	//% block="Port 3"
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04,
+	//% block="Port 5"
+        port5 = 0x05,
+        //% block="Port 6"
+        port6 = 0x06
     }
 	
     export enum startbit_CmdType {
@@ -1409,7 +1471,10 @@ namespace startbit {
                 status = pins.digitalReadPin(DigitalPin.P8);
                 break;	
 			
-           
+           case startbit_PhotosensitiveSensor.port6:
+                pins.setPull(DigitalPin.P12, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P12);
+                break;	
 			
         }
         if (status == 1)
