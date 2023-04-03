@@ -1385,10 +1385,14 @@ namespace startbit {
                 break;	
 		
             case startbit_PhotosensitiveSensor.port3:
-                pins.setPull(DigitalPin.P14, PinPullMode.PullUp);
-                status = pins.digitalReadPin(DigitalPin.P14);
+                pins.setPull(DigitalPin.P9, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P9);
                 break;	
 			
+            case startbit_PhotosensitiveSensor.port4:
+                pins.setPull(DigitalPin.P10, PinPullMode.PullUp);
+                status = pins.digitalReadPin(DigitalPin.P10);
+                break;		
 			
         }
         if (status == 1)
