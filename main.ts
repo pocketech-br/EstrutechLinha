@@ -94,7 +94,9 @@ namespace startbit {
 	//% block="Port 2"
         port2 = 0x02,
 	//% block="Port 3"
-        port3 = 0x03
+        port3 = 0x03,
+	//% block="Port 4"
+        port4 = 0x04
     }
 	
     export enum startbit_PhotosensitiveSensor {
@@ -103,7 +105,9 @@ namespace startbit {
         //% block="Port 2"
         port2 = 0x01,
 	//% block="Port 3"
-        port3 = 0x02
+        port3 = 0x02,
+	//% block="Port 4"
+        port4 = 0x03
     }
 
     export enum startbit_fanPort {
