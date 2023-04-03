@@ -1485,12 +1485,12 @@ namespace startbit {
         switch (port) {
             case startbit_ultrasonicPort.port1:
                 if (!lhRGBLightBelt) {
-                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P5, 15, StartbitRGBPixelMode.RGB);
+                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P1, 15, StartbitRGBPixelMode.RGB);
                 }
                 break;
             case startbit_ultrasonicPort.port2:
                 if (!lhRGBLightBelt) {
-                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P10, 15, StartbitRGBPixelMode.RGB);
+                    lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P13, 15, StartbitRGBPixelMode.RGB);
                 }
                 break;
         }
