@@ -1562,7 +1562,7 @@ namespace startbit {
                     lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P1, 15, StartbitRGBPixelMode.RGB);
                 }
                 break;
-            case startbit_ultrasonicPort.port2:
+            case startbit_ultrasonicPort.port4:
                 if (!lhRGBLightBelt) {
                     lhRGBLightBelt = StartbitRGBLight.create(DigitalPin.P13, 15, StartbitRGBPixelMode.RGB);
                 }
