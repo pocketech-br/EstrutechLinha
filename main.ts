@@ -1399,7 +1399,7 @@ namespace startbit {
                 echoPin = DigitalPin.P2;
                 trigPin = DigitalPin.P1;
                 break;
-            case startbit_ultrasonicPort.port4:
+            case startbit_ultrasonicPort.port3:
                 echoPin = DigitalPin.P14;
                 trigPin = DigitalPin.P13;
                 break;
